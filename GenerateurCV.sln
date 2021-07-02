@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31424.327
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenerateurCV", "GenerateurCV\GenerateurCV.csproj", "{510A533E-8A08-4DEC-AAA5-48E640181DF7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{510A533E-8A08-4DEC-AAA5-48E640181DF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{510A533E-8A08-4DEC-AAA5-48E640181DF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{510A533E-8A08-4DEC-AAA5-48E640181DF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{510A533E-8A08-4DEC-AAA5-48E640181DF7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7329003C-BFC1-44D9-9E99-4F78621AC608}
+	EndGlobalSection
+EndGlobal

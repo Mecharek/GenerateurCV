@@ -1,0 +1,42 @@
+﻿@model IEnumerable<GenerateurCV.Models.CV>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1 class="text-center">Listes des CVs</h1>
+
+<p>
+    <button type="button" class="btn btn-primary btn-lg">@Html.ActionLink("Ajouter", "Create", "CVsController", new { Style = "color:White" })</button>
+
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>
+            Nom
+        </th>
+        <th>
+            Prénom
+        </th>
+        <th>Actions</th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.User.Nom)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Nom)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+        @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.Id }) |
+        @Html.ActionLink("Aperçu", "Apercu", new { id = item.Id })
+    </td>
+    
+</tr>
+}
+
+</table>

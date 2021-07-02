@@ -1,0 +1,65 @@
+﻿@model GenerateurCV.Models.CV
+
+@{
+    ViewBag.Title = "Apercu";
+}
+
+<h2 class="text-center">Visualisation</h2>
+
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dd>
+            <strong>Nom</strong>:@Html.DisplayFor(model => model.User.Nom)
+        </dd>
+        <dd>
+            <strong>Prénom</strong>:@Html.DisplayFor(model => model.User.Prenom)
+        </dd>
+        <dd>
+            <strong>Adresse</strong>:@Html.DisplayFor(model => model.User.Adresse)
+        </dd>
+        <dd>
+            <strong>Téléphone</strong>:@Html.DisplayFor(model => model.User.Telephone)
+        </dd>
+        <dd>
+            <strong>Email</strong>:@Html.DisplayFor(model => model.User.Email)
+        </dd>
+        <hr style="width:100%; color:black; height:1px; background-color:black;" />
+        <h3 style="color:brown">Formations et diplômes</h3>
+        @foreach (var formation in Model.FormationsDiplomes)
+        {
+            <dd>
+                <strong>@formation.Date.ToShortDateString()</strong>: @formation.Intitule <br />
+            </dd>
+            <br/>
+
+        }
+        <hr style="width:100%; color:black; height:1px; background-color:black;" />
+        <h3 style="color:brown">Expériences professionnelles</h3>
+        @foreach (var exper in Model.Experiences)
+        {
+            <dd>
+                <strong>@exper.Periode</strong>: @exper.Poste<br />
+                @exper.Description
+            </dd>
+            <br/>
+        }
+
+    <hr style="width:100%; color:black; height:1px; background-color:black;" />
+        <h3 style="color:brown">Loisirs</h3>
+        @foreach (var loisir in Model.Loisirs)
+        {
+            <dd>
+                @loisir.Description
+            </dd>
+        }
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Générer le PDF", "PDF", new { id = Model.Id })
+</p>
